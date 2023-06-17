@@ -59,13 +59,84 @@ You'll need translation strings to name the options, explained in the next secti
 page = MyPage,
 translation = MyMod_OptionName,
 ```
-All options use translation strings the same way.
+All options use translation strings the same way. These strings point to translation strings in ``lua/shared/Translate/EN/Sandbox_EN.txt`` (for other languages, just swap EN for your language code). The file should be formatted as such:
+```
+Sandbox_EN = {
+    Sandbox_MyPage = "My Page Name",
+    
+    Sandbox_MyMod_OptionName = "My Option Name",
+    Sandbox_MyMod_OptionName_tooltip = "Extra details about my option.",
+}
+```
+Note that the strings you put into your option script are prefixed with ``Sandbox_``. Suffixing the option translation with ``_tooltip`` lets you set a tooltip for your option. If you don't want a tooltip, just omit that line.
 ## Enum values
+To name the options in an enum option, you must add to your option script:
 ```
 valueTranslation = MyMod_OptionName_Values,
 ```
-# Example of a full Sandbox Option file
+This will correspond to the following translation entries:
+```
+MyMod_OptionName_Values_option1 = "First Option",
+MyMod_OptionName_Values_option2 = "Option Two",
+MyMod_OptionName_Values_option3 = "My Third Option :D",
+```
+and so on, with an option\[number] up to your number of options.
+# Example of a working Sandbox Option file
+```
+VERSION = 1,
 
+option Literacy.XPMultiplier
+{
+    type = double,
+    min = 0.1,
+    default = 1.0,
+    max = 10.0,
+    page = Literacy,
+    translation = Literacy_XPMultiplier,
+}
+
+option Literacy.IlliteratePenalty
+{
+    type = enum,
+    numValues = 3,
+    default = 2,
+    page = Literacy,
+    translation = Literacy_IlliteratePenalty,
+    valueTranslation = Literacy_IlliteratePenalties,
+}
+
+option Literacy.WalkWhileReadingLevel
+{
+    type = integer,
+    min = -1,
+    default = -1,
+    max = 10,
+    page = Literacy,
+    translation = Literacy_WalkWhileReadingLevel,
+}
+
+option Literacy.ReadInTheDark
+{
+    type = boolean,
+    default = true,
+    page = Literacy,
+    translation = Literacy_ReadInTheDark,
+}
+```
 # Common Issues
+- **My sandbox options aren't changing/new ones aren't appearing**
 
+If you've uploaded your mod to the workshop, or you've worked with your mod in multiple directories, it might be reading the wrong file. The game seems to choose which sandbox-options file to load independently of which copy of the mod it's loading, so even if the rest of your mod is loading from the correct directory, **unsubscribe from your mod on the workshop**, or remove it from the directories you aren't using anymore.
+
+---
 # Cheat Sheet
+Parameter | Types | Type/valid values
+--- | --- | ---
+type | all | boolean/integer/double/string/enum
+page | all | string
+translation | all | string
+default | all | type of option
+min | integer/double | number
+max | integer/double | number
+numValues | enum | integer
+valueTranslation | enum | string
