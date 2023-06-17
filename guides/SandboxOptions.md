@@ -140,3 +140,5 @@ min | integer/double | number
 max | integer/double | number
 numValues | enum | integer
 valueTranslation | enum | string
+
+[Return](../README.md)
