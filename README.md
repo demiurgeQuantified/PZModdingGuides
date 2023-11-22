@@ -2,6 +2,7 @@
 ## Guides and Resources
 - [Sandbox Options](/guides/SandboxOptions.md)
 - [Game Time and deltas](/guides/GameTime.md)
+- [Script Function Signatures](/guides/ScriptFunctions.md)
 - [Events List](https://github.com/demiurgeQuantified/PZEventDoc/blob/develop/docs/Events.md)
 ## Other Resources
 <img src="https://i.imgur.com/wMKl10y.png" width="500">
