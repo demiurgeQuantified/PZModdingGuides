@@ -6,7 +6,7 @@ In many of Zomboid's script formats there are entries for Lua functions that sho
 Contents |  |
 --- | ---
 [Items](#items) | [OnCreate](#oncreate)<br>[OnCooked](#oncooked)<br>[OnEat](#oneat)<br>[AcceptItemFunction](#acceptitemfunction)
-[Recipes](#recipes) | [OnCanPerform](#oncanperform)<br>[OnTest](#ontest)<br>[OnCreate](#oncreate)<br>[OnGiveXP](#ongivexp)
+[Recipes](#recipes) | [OnCanPerform](#oncanperform)<br>[OnTest](#ontest)<br>[OnCreate](#oncreate-1)<br>[OnGiveXP](#ongivexp)
 [Vehicle Parts](#vehicle-parts) | [init](#init)<br>[create](#create)<br>[checkEngine](#checkengine)<br>[checkOperate](#checkoperate)<br>[update](#update)<br>[use](#use)
 [Install/Uninstall tables](#installuninstall-tables) | [test](#test)<br>[complete](#complete)
 
