@@ -58,6 +58,8 @@ All recipe functions are called on the client doing the crafting only.
 ## OnCanPerform
 Called when checking whether a character is able to perform the recipe. This is mostly useful when something beyond the recipe itself is required to craft. If you want to check the items involved, [OnTest](#ontest) is better.
 
+If this function returns false or nil, the recipe is not able to be crafted. If it returns any other value, the recipe is allowed, as long as no other factors are preventing it.
+
 Name | Type | Description
 --- | --- | ---
 recipe | [Recipe](https://projectzomboid.com/modding/zombie/scripting/objects/Recipe.html) | The recipe being checked
