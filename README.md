@@ -1,5 +1,6 @@
 # PZModdingGuides
 ## Guides and Resources
+- [Modules](/guides/Modules.md)
 - [Sandbox Options](/guides/SandboxOptions.md)
 - [Game Time and deltas](/guides/GameTime.md)
 - [Script Function Signatures](/guides/ScriptFunctions.md)
