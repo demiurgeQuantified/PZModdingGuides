@@ -77,8 +77,7 @@ Oddly, this multiplier doesn't actually use a delta - it is always based on the 
 This scales by the game speed, and adds up to 8 every second.
 The usage for this is unknown, and the vanilla game doesn't even use it.
 ### [getTrueMultiplier()](https://projectzomboid.com/modding/zombie/GameTime.html#getTrueMultiplier())
-Always returns 1.
-Not much reason to use this one.
+Returns the current game speed multiplier (Speed up through the UI or while sleeping)
 
 ## Cheat sheet
 | Name | Game Speed | Day Length | Total (1x speed, 30 minute days) |
