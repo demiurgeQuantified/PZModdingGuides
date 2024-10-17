@@ -7,11 +7,11 @@ The first line of your file must be ``VERSION = 1,`` . This tells the game what 
 Each option is defined in an option block. A generic option block looks like this:
 ```
 option MyMod.Name {
-    type = KEEP READING,
+    type = PLACEHOLDER,
 
 }
 ```
-Note that this is stripped down to the common parts for demonstration purposes, and isn't actually a valid sandbox option.
+Note that ``PLACEHOLDER`` is not a valid type. Read on to see valid types.
 
 The most important part is the ``option MyMod.Name``. This defines the name of our option: The format is \[Table].\[OptionName], with the table usually being named after the mod.
 You'll be able to access the option in Lua using the name you set using ``SandboxVars.[Table].[OptionName]``. For example, an option defined as ``option MyMod.TestOption`` can be accessed using ``SandboxVars.MyMod.TestOption``.
@@ -25,11 +25,13 @@ The type declares what datatype the option represents. The available types are [
 # Option Types
 ## Boolean
 ```
+type = boolean,
 default = true/false,
 ```
 Booleans are as simple as it gets. The option will be a tickbox. You can set the tickbox to be ticked by default (true) or unticked (false).
 ## Integer
 ```
+type = integer,
 min = -5,
 max = 10,
 default = 5,
@@ -37,6 +39,7 @@ default = 5,
 Integers are whole numbers (no decimal point). If you need decimal numbers, use a double instead. You can set the minimum, maximum and default values for the number.
 ## Double
 ```
+type = double,
 min = -9.5,
 max = 12.34,
 default = 1,
@@ -44,11 +47,13 @@ default = 1,
 Doubles are decimal numbers. If you need only whole numbers, use an integer instead. You can set the minimum, maximum and default values for the number.
 ## String
 ```
+type = string,
 default = MyString,
 ```
 Strings are text. You only need to set a default value for these - if you want the default to be empty, write ``default = ,`` (even though it looks wrong!)
 ## Enum
 ```
+type = enum,
 numValues = 3,
 default = 1,
 ```
