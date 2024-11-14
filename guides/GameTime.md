@@ -57,8 +57,7 @@ This is the time delta from **getRealworldSecondsSinceLastUpdate()**, but scales
 Use this for effects that are only tied to game speed but not day length.
 ### [getMultiplier()](https://projectzomboid.com/modding/zombie/GameTime.html#getMultiplier())
 This is the game speed delta. It scales with the game speed and the day length.
-For legacy reasons, this delta actually adds up to 0.8 a second, not 1.
-This means that when using it you should expect only 80% of the base amount being multiplied to be applied per second, not 100% as with other most other deltas.
+For some reason this delta actually adds up to 48 a second, not 1.
 Use this when you want your effect to scale by game world time, and be slower/faster depending on the day length.
 ### [getInvMultiplier()](https://projectzomboid.com/modding/zombie/GameTime.html#getInvMultiplier())
 This is the inverse of **getMultiplier()** - it returns 1 divided by the result of **getMultiplier()**.
@@ -68,7 +67,7 @@ This is the game speed delta, similar to the one from **getMultiplier()**.
 The difference is that this one adds up to 1 every minute, not 0.8 every second.
 ### [getUnmoddedMultiplier()](https://projectzomboid.com/modding/zombie/GameTime.html#getUnmoddedMultiplier())
 This is similar to the regular **getMultiplier()**, but doesn't scale with day length.
-This one adds up to 1 every second, not 0.8. Use this when you want your effect to scale with game speedup, but shouldn't be tied to the day length.
+This one adds up to 1 every second. Use this when you want your effect to scale with game speedup, but shouldn't be tied to the day length.
 ### [getGameWorldSecondsSinceLastUpdate()](https://projectzomboid.com/modding/zombie/GameTime.html#getGameWorldSecondsSinceLastUpdate())
 The number of game time seconds that have passed since the last frame.
 Keep in mind that at default day length (1 hour), one in-game second is roughly 400 milliseconds, so this value will be very high even at 1x speed.
@@ -85,7 +84,7 @@ Returns the current game speed multiplier (Speed up through the UI or while slee
 | getRealworldSecondsSinceLastUpdate() | No | No | 1/s |
 | getMultipliedSecondsSinceLastUpdate() | Yes | No | 1/s |
 | getUnmoddedMultiplier() | Yes | No | 1/s |
-| getMultiplier() | Yes | Yes | 0.8/s |
+| getMultiplier() | Yes | Yes | 48/s |
 | getInvMultiplier() | Yes | Yes | Inverse |
 | getTimeDelta() | Yes | Yes | 1/m |
 | getGameWorldSecondsSinceLastUpdate() | Yes | Yes | 1/game second |
