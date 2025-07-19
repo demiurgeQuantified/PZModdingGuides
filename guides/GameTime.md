@@ -84,9 +84,10 @@ Returns the current game speed multiplier (Speed up through the UI or while slee
 | getRealworldSecondsSinceLastUpdate() | No | No | 1/s |
 | getMultipliedSecondsSinceLastUpdate() | Yes | No | 1/s |
 | getUnmoddedMultiplier() | Yes | No | 1/s |
-| getMultiplier() | Yes | Yes | 48/s |
-| getInvMultiplier() | Yes | Yes | Inverse |
-| getTimeDelta() | Yes | Yes | 1/m |
+| getMultiplier() | Yes | No | 48/s |
+| getThirtyFPSMultiplier() | Yes | No | 30/s |
+| getInvMultiplier() | Yes | No | Inverse |
+| getTimeDelta() | Yes | No | 1/s |
 | getGameWorldSecondsSinceLastUpdate() | Yes | Yes | 1/game second |
 
 Note: It seems that getUnmoddedMultiplier() and getMultipliedSecondsSinceLastUpdate() are completely redundant with each other.
