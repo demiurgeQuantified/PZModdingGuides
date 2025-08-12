@@ -81,9 +81,9 @@ valueTranslation = MyMod_OptionName_Values,
 ```
 This will correspond to the following translation entries:
 ```
-MyMod_OptionName_Values_option1 = "First Option",
-MyMod_OptionName_Values_option2 = "Option Two",
-MyMod_OptionName_Values_option3 = "My Third Option :D",
+Sandbox_MyMod_OptionName_Values_option1 = "First Option",
+Sandbox_MyMod_OptionName_Values_option2 = "Option Two",
+Sandbox_MyMod_OptionName_Values_option3 = "My Third Option :D",
 ```
 and so on, with an option\[number] up to your number of options.
 # Example of a working Sandbox Option file
