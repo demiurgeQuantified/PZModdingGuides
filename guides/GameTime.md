@@ -48,6 +48,9 @@ Events.OnTick.Add(healingOnTick)
 ```
 
 ## The deltas, what they mean, and when to use them
+> [!note]
+> This information is now kept in the [Javadocs](https://demiurgequantified.github.io/ProjectZomboidJavaDocs/zombie/GameTime.html). The information on this page may become outdated.
+
 When unspecified, a delta adds up to 1 per second. This means that you should multiply the delta by the amount you want it to increase every real world second. If it scales with day length, this is multiplied for longer days (1x for thirty minute days, 2x for one hour days, 4x for two hour days, etc). If it scales with game speed, it is multiplied by the game speed (1x, 5x, 20x and 40x).
 ### [getRealworldSecondsSinceLastUpdate()](https://projectzomboid.com/modding/zombie/GameTime.html#getRealworldSecondsSinceLastUpdate())
 This is the 'raw' time delta. It scales with nothing.
